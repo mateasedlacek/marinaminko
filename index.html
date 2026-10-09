@@ -1,700 +1,149 @@
-Web novi
 
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#ffffff">
+  <title>Marina Minko</title>
 
-  <title>Marina Minko — Plant-Based Chef & Culinary Consultant</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
 
-  <meta
-    name="description"
-    content="Marina Minko is a plant-based chef and culinary consultant helping restaurants, hotels, food businesses and culinary teams create exceptional plant-based food."
-  />
+    body {
+      margin: 0;
+      min-height: 100vh;
+      min-height: 100svh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: #fff;
+      font-family: Arial, Helvetica, sans-serif;
+    }
 
-  <meta
-    name="keywords"
-    content="Marina Minko, plant-based chef, vegan chef, culinary consultant, plant-based consulting, menu development, chef training"
-  />
+    main {
+      width: 100%;
+      padding: 32px 24px;
+      text-align: center;
+      animation: fadeIn 2.5s ease-out both;
+    }
 
-  <meta name="author" content="Marina Minko" />
+    .logo {
+      display: block;
+      width: 100%;
+      max-width: 1500px;
+      height: auto;
+      margin: 0 auto;
+      -webkit-mask-image: linear-gradient(
+        to bottom,
+        transparent 0%,
+        #000 12%,
+        #000 88%,
+        transparent 100%
+      );
+      mask-image: linear-gradient(
+        to bottom,
+        transparent 0%,
+        #000 12%,
+        #000 88%,
+        transparent 100%
+      );
+    }
 
-  <!-- Open Graph -->
-  <meta property="og:title" content="Marina Minko — Plant-Based Chef & Culinary Consultant" />
-  <meta
-    property="og:description"
-    content="Plant-based food with serious flavour, strong culinary identity and real-world commercial thinking."
-  />
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://www.marinaminko.com/" />
+    .status {
+      margin-top: clamp(42px, 7vh, 80px);
+      color: #222;
+      font-size: 14px;
+      letter-spacing: 0.38em;
+      font-weight: 400;
+      text-transform: uppercase;
+      animation: fadeIn 2s ease-out 0.8s both;
+    }
 
-  <!-- Replace with your final social sharing image -->
-  <meta
-    property="og:image"
-    content="https://www.marinaminko.com/assets/marina-social.jpg"
-  />
+    .loader {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+      margin-top: 26px;
+    }
 
-  <link rel="canonical" href="https://www.marinaminko.com/" />
+    .loader span {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: #777;
+      animation: pulse 1.4s ease-in-out infinite;
+    }
 
-  <link rel="stylesheet" href="styles.css" />
+    .loader span:nth-child(2) {
+      animation-delay: 0.2s;
+    }
+
+    .loader span:nth-child(3) {
+      animation-delay: 0.4s;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(8px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes pulse {
+      0%, 60%, 100% {
+        opacity: 0.25;
+        transform: scale(0.8);
+      }
+      30% {
+        opacity: 1;
+        transform: scale(1.15);
+      }
+    }
+
+    @media (max-width: 600px) {
+      main {
+        padding: 24px 18px;
+      }
+
+      .status {
+        font-size: 11px;
+        letter-spacing: 0.25em;
+        margin-top: 42px;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+      }
+    }
+  </style>
 </head>
 
 <body>
-
-  <!-- =========================================================
-       HEADER
-  ========================================================== -->
-
-  <header class="site-header">
-
-    <a href="#top" class="logo">
-      MARINA MINKO
-    </a>
-
-    <nav class="main-navigation" aria-label="Main navigation">
-
-      <a href="#about">About</a>
-
-      <a href="#work">Work with me</a>
-
-      <a href="#projects">Projects</a>
-
-      <a href="#contact">Contact</a>
-
-    </nav>
-
-    <button
-      class="menu-toggle"
-      aria-label="Open navigation"
-      aria-expanded="false"
-      type="button"
+  <main>
+    <img
+      class="logo"
+      src="./marina-minko.png"
+      alt="Marina Minko — elevating the mouthfeel of plant-based cuisine"
     >
+
+    <div class="status">Under Construction</div>
+
+    <div class="loader" role="status" aria-label="Website under construction">
       <span></span>
       <span></span>
-    </button>
-
-  </header>
-
-
-  <main id="top">
-
-
-    <!-- =========================================================
-         HERO
-    ========================================================== -->
-
-    <section class="hero">
-
-      <div class="hero-content">
-
-        <p class="eyebrow">
-          PLANT-BASED CHEF · CULINARY CONSULTANT
-        </p>
-
-        <h1>
-          Food that people
-          <em>want</em> to eat.
-        </h1>
-
-        <p class="hero-introduction">
-          I help restaurants, hotels, food businesses and culinary teams
-          create ambitious plant-based food — from the first idea to
-          the finished plate.
-        </p>
-
-        <div class="hero-actions">
-
-          <a href="#contact" class="button">
-            Work with Marina
-          </a>
-
-          <a href="#about" class="text-link">
-            Meet Marina
-            <span>↓</span>
-          </a>
-
-        </div>
-
-      </div>
-
-
-      <div class="hero-image">
-
-        <img
-          src="assets/hero-marina.jpg"
-          alt="Marina Minko working in a professional kitchen"
-        />
-
-      </div>
-
-    </section>
-
-
-
-    <!-- =========================================================
-         INTRO / PHILOSOPHY
-    ========================================================== -->
-
-    <section class="intro section">
-
-      <div class="section-label">
-        01 / THE APPROACH
-      </div>
-
-      <div class="intro-content">
-
-        <h2>
-          Plant-based food should never feel like
-          <em>the compromise</em> on the menu.
-        </h2>
-
-        <p>
-          Great plant-based cooking starts with flavour.
-          But a great dish also has to work in a real kitchen,
-          for a real team, at a real cost, for real guests.
-        </p>
-
-        <p>
-          That's where I come in.
-        </p>
-
-      </div>
-
-    </section>
-
-
-
-    <!-- =========================================================
-         SERVICES
-    ========================================================== -->
-
-    <section class="services section" id="work">
-
-      <div class="section-label">
-        02 / WORK WITH ME
-      </div>
-
-
-      <div class="services-list">
-
-
-        <!-- SERVICE 01 -->
-
-        <article class="service">
-
-          <div class="service-number">
-            01
-          </div>
-
-          <div class="service-content">
-
-            <h3>
-              Culinary Consulting
-            </h3>
-
-            <p>
-              Plant-based strategy for restaurants, hotels and
-              food businesses. From concept development and menu
-              audits to positioning, sourcing, food cost and
-              operational considerations.
-            </p>
-
-          </div>
-
-        </article>
-
-
-        <!-- SERVICE 02 -->
-
-        <article class="service">
-
-          <div class="service-number">
-            02
-          </div>
-
-          <div class="service-content">
-
-            <h3>
-              Menu Development
-            </h3>
-
-            <p>
-              From the first idea to a finished, repeatable dish.
-              Concept development, recipes, seasonal menus,
-              testing, refinement and implementation.
-            </p>
-
-          </div>
-
-        </article>
-
-
-        <!-- SERVICE 03 -->
-
-        <article class="service">
-
-          <div class="service-number">
-            03
-          </div>
-
-          <div class="service-content">
-
-            <h3>
-              Training & Kitchen Support
-            </h3>
-
-            <p>
-              Practical chef training and hands-on kitchen support
-              that gives teams the techniques, confidence and
-              systems to deliver consistently.
-            </p>
-
-          </div>
-
-        </article>
-
-
-      </div>
-
-    </section>
-
-
-
-    <!-- =========================================================
-         ABOUT MARINA
-    ========================================================== -->
-
-    <section class="about section" id="about">
-
-
-      <div class="about-image">
-
-        <img
-          src="assets/marina-portrait.jpg"
-          alt="Portrait of Marina Minko"
-        />
-
-      </div>
-
-
-      <div class="about-content">
-
-        <div class="section-label">
-          03 / ABOUT MARINA
-        </div>
-
-        <h2>
-          I didn't become a chef
-          through the usual route.
-        </h2>
-
-        <p>
-          I'm Marina Minko, a self-taught plant-based chef and
-          culinary consultant.
-        </p>
-
-        <p>
-          My work sits between creativity and practicality:
-          developing food that is exciting enough to stand out,
-          but grounded enough to survive a busy kitchen.
-        </p>
-
-        <p>
-          Over the years I've worked across hospitality,
-          menu development, culinary leadership, chef training
-          and food writing — helping teams turn plant-based
-          ideas into food people genuinely want to order.
-        </p>
-
-        <a href="#contact" class="text-link">
-          Start a conversation
-          <span>→</span>
-        </a>
-
-      </div>
-
-    </section>
-
-
-
-    <!-- =========================================================
-         CREDIBILITY
-    ========================================================== -->
-
-    <section class="credibility section">
-
-      <div class="credibility-item">
-
-        <strong>
-          100+
-        </strong>
-
-        <span>
-          food columns & published recipes
-        </span>
-
-      </div>
-
-
-      <div class="credibility-item">
-
-        <strong>
-          EUROPE
-        </strong>
-
-        <span>
-          culinary projects & collaborations
-        </span>
-
-      </div>
-
-
-      <div class="credibility-item">
-
-        <strong>
-          CHEF
-        </strong>
-
-        <span>
-          consultant, developer & educator
-        </span>
-
-      </div>
-
-    </section>
-
-
-
-    <!-- =========================================================
-         SELECTED PROJECTS
-    ========================================================== -->
-
-    <section class="projects section" id="projects">
-
-      <div class="section-label">
-        04 / SELECTED WORK
-      </div>
-
-
-      <div class="projects-grid">
-
-
-        <!-- PROJECT 01 -->
-
-        <article class="project project-featured">
-
-          <div class="project-image">
-
-            <img
-              src="assets/project-saorsa.jpg"
-              alt="Plant-based culinary work by Marina Minko"
-            />
-
-          </div>
-
-          <div class="project-information">
-
-            <p class="project-category">
-              CULINARY CONSULTING
-            </p>
-
-            <h3>
-              Saorsa1875
-            </h3>
-
-            <p>
-              Plant-based culinary development, kitchen consulting
-              and strategic support.
-            </p>
-
-            <a href="#" class="text-link">
-              View project
-              <span>→</span>
-            </a>
-
-          </div>
-
-        </article>
-
-
-
-        <!-- PROJECT 02 -->
-
-        <article class="project">
-
-          <div class="project-image">
-
-            <img
-              src="assets/project-vegan-travel.jpg"
-              alt="Marina Minko plant-based cruise menu"
-            />
-
-          </div>
-
-          <div class="project-information">
-
-            <p class="project-category">
-              EXECUTIVE CHEF · MENU DEVELOPMENT
-            </p>
-
-            <h3>
-              Vegan Travel
-            </h3>
-
-            <p>
-              Plant-based menus and culinary delivery
-              in a hospitality setting.
-            </p>
-
-            <a href="#" class="text-link">
-              View project
-              <span>→</span>
-            </a>
-
-          </div>
-
-        </article>
-
-
-
-        <!-- PROJECT 03 -->
-
-        <article class="project">
-
-          <div class="project-image">
-
-            <img
-              src="assets/project-m89.jpg"
-              alt="Marina Minko culinary education project"
-            />
-
-          </div>
-
-          <div class="project-information">
-
-            <p class="project-category">
-              EDUCATION · CULINARY DEVELOPMENT
-            </p>
-
-            <h3>
-              CTA M89
-            </h3>
-
-            <p>
-              Food, education and practical plant-based
-              culinary development.
-            </p>
-
-            <a href="#" class="text-link">
-              View project
-              <span>→</span>
-            </a>
-
-          </div>
-
-        </article>
-
-
-      </div>
-
-    </section>
-
-
-
-    <!-- =========================================================
-         PHILOSOPHY / FOOD IMAGE
-    ========================================================== -->
-
-    <section class="philosophy section">
-
-      <div class="philosophy-heading">
-
-        <p class="eyebrow">
-          TASTES TO TAKE YOU PLACES.
-        </p>
-
-        <h2>
-          Serious food.
-          <em>No compromise.</em>
-        </h2>
-
-      </div>
-
-
-      <div class="food-image">
-
-        <img
-          src="assets/food-hero.jpg"
-          alt="Plant-based dish created by Marina Minko"
-        />
-
-      </div>
-
-    </section>
-
-
-
-    <!-- =========================================================
-         CONTACT
-    ========================================================== -->
-
-    <section class="contact section" id="contact">
-
-      <div class="section-label">
-        05 / CONTACT
-      </div>
-
-
-      <div class="contact-content">
-
-        <h2>
-          Have a project
-          in mind?
-        </h2>
-
-        <p>
-          Tell me what you're working on, where you are in the
-          process and what you need help with.
-        </p>
-
-        <p>
-          I'll get back to you directly.
-        </p>
-
-
-        <a
-          href="mailto:hello@marinaminko.com"
-          class="contact-email"
-        >
-          hello@marinaminko.com
-        </a>
-
-
-        <div class="social-links">
-
-          <a
-            href="https://www.instagram.com/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Instagram ↗
-          </a>
-
-          <a
-            href="https://www.linkedin.com/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            LinkedIn ↗
-          </a>
-
-        </div>
-
-      </div>
-
-    </section>
-
-
+      <span></span>
+    </div>
   </main>
-
-
-
-  <!-- =========================================================
-       FOOTER
-  ========================================================== -->
-
-  <footer class="site-footer">
-
-    <div class="footer-brand">
-
-      <a href="#top" class="logo">
-        MARINA MINKO
-      </a>
-
-      <p>
-        Plant-based chef & culinary consultant
-      </p>
-
-    </div>
-
-
-    <div class="footer-information">
-
-      <p>
-        © <span id="current-year"></span> MMINKO OÜ
-      </p>
-
-      <a href="#">
-        Privacy
-      </a>
-
-    </div>
-
-  </footer>
-
-
-
-  <!-- =========================================================
-       JAVASCRIPT
-  ========================================================== -->
-
-  <script>
-
-    /*
-      Mobile navigation
-    */
-
-    const menuToggle =
-      document.querySelector(".menu-toggle");
-
-    const navigation =
-      document.querySelector(".main-navigation");
-
-
-    menuToggle.addEventListener("click", function () {
-
-      const isOpen =
-        navigation.classList.toggle("open");
-
-      menuToggle.setAttribute(
-        "aria-expanded",
-        isOpen
-      );
-
-    });
-
-
-    /*
-      Close mobile menu after clicking a link
-    */
-
-    document
-      .querySelectorAll(".main-navigation a")
-      .forEach(function (link) {
-
-        link.addEventListener("click", function () {
-
-          navigation.classList.remove("open");
-
-          menuToggle.setAttribute(
-            "aria-expanded",
-            "false"
-          );
-
-        });
-
-      });
-
-
-    /*
-      Current year
-    */
-
-    document.getElementById("current-year").textContent =
-      new Date().getFullYear();
-
-  </script>
-
 </body>
 </html>
